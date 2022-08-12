@@ -1,5 +1,12 @@
-Disable the F3 key.
-If you publish to LAN, you can use the F3 key.
+Enable/disable F3 key while playing Minecraft.
 
-F3キーを無効化します。
-LANに公開しているとF3キーを使えます。
+マインクラフトをプレイ中に、F3キーを有効/無効化します。
+
+## 使い方
+Disable.ahkを起動し、Ctrl+LでF3キーの有効/無効を切り替えます。  
+ただし、マインクラフトのウインドウにフォーカスが当たっている時のみ動作します。
+
+## 設定
+Disable.ahkを任意のテキストエディタで開き、設定を変更できます。
+- OnOffSoundで、有効/無効の切り替え時に音を鳴らすか選択します。
+- ホットキーは12行目を書き換えることで変更できます。デフォルトはCtrl+Lです。
