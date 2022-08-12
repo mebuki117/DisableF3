@@ -1,10 +1,25 @@
-; Never press F3
+; Disable F3
 
+; Setting
+Global OnOffSound := True  ; Play a sound when switching on/off
+
+; Don't Change
 SetTitleMatchMode, 2
-#IfWinNotActive, LAN
+
+#If WinActive("Minecraft") && WinActive("ahk_exe javaw.exe")
 {
-    Shift & F3:: return
-    F3:: return
-    Ctrl & F3:: return
-    Alt & F3:: return
+    ; OnOffSwitch
+    ^L::
+        Suspend
+        If (OnOffSound = True)
+        {
+            SoundPlay, Sound.mp3
+        }
+    Return
+
+    ; Disable F3s
+    F3:: Return
+    Shift & F3:: Return
+    Ctrl & F3:: Return
+    Alt & F3:: Return
 }
